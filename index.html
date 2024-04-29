@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Curso de CSS</title>
+        
+        <style>
+            html, body {
+                margin:0;
+                padding:0;
+            }
+
+            html {
+                background:rgb(229,229,229);
+            }
+
+            article, aside, section, header, footer, nav {
+                display:block;
+            }
+
+            main {
+                width:75%;
+                margin:10px auto;
+                box-shadow:0 0 10px #999999;
+                background-color:rgb(255,255,255);
+                font-size:14px;
+                min-width:745px;
+
+            }
+
+            header {
+                width:100%;
+                height:110px;
+                background-color:rgb(255,127,0);
+                background-color:rgb(12,4,1);
+                background-image:url(imagens/topo.jpg);
+                background-repeat:no-repeat;		
+            }
+
+            nav {
+                width:100%;
+                height:32px;
+                background-color:rgb(12,4,1);
+            }
+
+            nav a {
+                float:left;
+                font-family: Georgia, "Times New Roman", Times, serif;
+                font-style: italic;
+                color: #FC9;
+                text-decoration: none;
+                padding:5px 2%;
+                font-size: 100%;
+                text-align: center;
+            }
+
+            .conteudo {
+                float:left;
+                width:62%;
+                background-color:rgb(255,255,204);
+                margin-top:10px;
+                margin-bottom:20px;
+                padding:0 2%;
+            }
+
+            .conteudo h1, .conteudo h2 {
+                font-family:Georgia, "Times New Roman", Times, serif;
+                font-style:italic;
+                color:rgb(153,102,51);
+                margin:10px 0;
+            }
+
+            .conteudo h1 { font-size:250% }
+            .conteudo h2 { font-size:200%; margin-top:20px }
+
+            .conteudo p {
+                font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+                line-height:200%;
+                margin:0;padding:0;
+            }
+
+            .conteudo img {
+                float:left;
+                margin-right:10px;
+            }
+
+            .apoio {
+                float:right;
+                width:32%;
+                height:500px;
+                background-color:rgb(221,221,221);
+                margin-top:10px;
+            }
+
+            footer {
+                clear:both;
+                width:100%;
+                height:60px;
+                background-color:rgb(153,153,153);
+            }
+
+        </style>
+
+
+    </head>
+
+    <body>
+        <main>
+            <header></header>
+            <nav>
+                <a href="inicial/Início.html">Início</a> 
+                <a href="inicial/Sobrenos.html">Sobre nós</a>
+                <a href="inicial/Menu.html">Menu</a> 
+                <a href="inicial/Modelos.html">Modelos</a>
+                <a href="inicial/Companhia.html">Companhia</a>
+                <a href="inicial/Coleção.html">Coleção</a>
+                <a href="inicial/Carrinho.html">Carrinho</a>
+            </nav>
+
+            <section class="conteudo">
+              <h1>ANUAL SUN PHASE</h1>
+              <p>Nosso relógio vem equipado com tecnologia  muito avançada.</p>
+              <p>O nome "Anual Sun Phase" vem com inspiração em sua cor mais amarelada e quente.</p>
+              <h2></h2>
+              <p><img src="imagens/domingaodofaustao.png" width="255" height="255" alt="sun">Relógio </p>
+              <p>edasdasdasd</p>
+              <h2>Special Events</h2>
+              <p>We want to share the elegant private dining room at the Cafe Fontenebleau flagship restaurant with you! Set in a unique, historic building in Paris, our private dining room is available to host your corporate events, parties, weddings, and more.</p>
+              <p>Our special events manager, sommelier, and executive chef will work with you to make sure your special event is truly special. We offer multiple menu options, or we can customize a menu for you. In keeping with the award-winning cuisine and exceptional service you expect, we provide place cards, personally printed menus, and candles. We are also happy to help you arrange other services.</p>
+              <p>Our unique setting, highly personalized service, and memorable dining are the perfect combination for your special event! Please contact us for more information!</p>
+
+            </section>
+            <section class="apoio"></section>
+
+            <footer></footer>
+        </main>
+    </body>
+</html>

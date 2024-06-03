@@ -1,9 +1,11 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background-color: #333;
+    background-color: #bb0101;
     color: white;
     padding: 1rem;
     text-align: center;
@@ -12,32 +14,57 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 10px;
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
 }
 
 main {
     padding: 1rem;
 }
 
-.product, .cart-item, .favorite-item {
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem;
+    width: calc(25% - 2rem); /* 25% width minus margins */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.product img {
+    width: 100%; /* Width 100% to fill the container */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Crop the image to fit the container */
+}
+
+.cart-item, .favorite-item {
     border: 1px solid #ccc;
     padding: 1rem;
     margin: 1rem;
     text-align: center;
 }
 
-.product img, .cart-item img, .favorite-item img {
-    max-width: 100%;
-    height: auto;
+.cart-item img, .favorite-item img {
+    width: 100px; /* Fixed width */
+    height: 100px; /* Fixed height */
+    object-fit: cover; /* Crop the image to fit the container */
 }
 
 form {

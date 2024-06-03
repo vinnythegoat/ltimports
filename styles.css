@@ -2,11 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #c9c8c8da;
 }
 
 header {
-    background-color: #bb0101;
-    color: white;
+    background-color: #ff0000;
+    color: rgb(0, 0, 0);
     padding: 1rem;
     text-align: center;
 }
@@ -40,7 +41,8 @@ main {
 }
 
 .product {
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
+    background-color: #fffdfde0;
     padding: 1rem;
     margin: 1rem;
     width: calc(25% - 2rem); /* 25% width minus margins */
@@ -50,7 +52,7 @@ main {
 
 .product img {
     width: 100%; /* Width 100% to fill the container */
-    height: 200px; /* Fixed height */
+    height: 240px; /* Fixed height */
     object-fit: cover; /* Crop the image to fit the container */
 }
 
@@ -95,5 +97,5 @@ button {
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #a5a5a5;
 }

@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const productList = document.getElementById('product-list');
-    const cartItems = document.getElementById('cart-items');
-    const favoritesList = document.getElementById('favorites-list');
+    const productDetails = document.getElementById('product-details');
 
-    // Simulação de dados de produtos
+    // Simulação de dados de produtos (mesmo array de `app.js`)
     const products = [
         { id: 1, name: 'Watch 1', description: 'Description 1', price: 100, image: 'imagens/download.jpeg' },
         { id: 2, name: 'Watch 2', description: 'Description 2', price: 200, image: 'images/watch2.jpg' },
@@ -15,25 +13,26 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 8, name: 'Watch 8', description: 'Description 8', price: 800, image: 'images/watch8.jpg' },
     ];
 
-    // Função para renderizar produtos
-    function renderProducts() {
-        productList.innerHTML = '';
-        products.forEach(product => {
-            const productElement = document.createElement('div');
-            productElement.className = 'product';
-            productElement.innerHTML = `
-                <img src="${product.image}" alt="${product.name}" onclick="viewProduct(${product.id})">
+    const selectedProductId = localStorage.getItem('selectedProduct');
+    const product = products.find(p => p.id == selectedProductId);
+
+    if (product) {
+        productDetails.innerHTML = `
+            <div class="product-detail">
+                <img src="${product.image}" alt="${product.name}">
                 <h3>${product.name}</h3>
                 <p>${product.description}</p>
                 <p>$${product.price}</p>
-               
-            `;
-            productList.appendChild(productElement);
-        });
+                <button onclick="addToCart(${product.id})">Add to Cart</button>
+                <button onclick="addToFavorites(${product.id})">Add to Favorites</button>
+            </div>
+        `;
+    } else {
+        productDetails.innerHTML = '<p>Product not found.</p>';
     }
 
     // Função para adicionar produto ao carrinho
-    function addToCart(productId) {
+    window.addToCart = function(productId) {
         const product = products.find(p => p.id === productId);
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         cart.push(product);
@@ -42,19 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Função para adicionar produto aos favoritos
-    function addToFavorites(productId) {
+    window.addToFavorites = function(productId) {
         const product = products.find(p => p.id === productId);
         let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
         favorites.push(product);
         localStorage.setItem('favorites', JSON.stringify(favorites));
         alert('Product added to favorites!');
     }
-
-    // Função para redirecionar para a página de detalhes do produto
-    window.viewProduct = function(productId) {
-        localStorage.setItem('selectedProduct', productId);
-        window.location.href = 'produto.html';
-    }
-
-    renderProducts();
 });

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Simulação de dados de produtos (mesmo array de `app.js`)
     const products = [
-        { id: 1, name: 'Watch 1', description: 'Description 1', price: 100, image: 'imagens/download.jpeg' },
+        { id: 1, name: 'Watch 1', description: 'Description 1', price: 100, image: 'imagens/download-removebg-preview.png' },
         { id: 2, name: 'Watch 2', description: 'Description 2', price: 200, image: 'images/watch2.jpg' },
         { id: 3, name: 'Watch 3', description: 'Description 3', price: 300, image: 'images/watch3.jpg' },
         { id: 4, name: 'Watch 4', description: 'Description 4', price: 400, image: 'images/watch4.jpg' },
@@ -23,8 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h3>${product.name}</h3>
                 <p>${product.description}</p>
                 <p>$${product.price}</p>
-                <button onclick="addToCart(${product.id})">Add to Cart</button>
-                <button onclick="addToFavorites(${product.id})">Add to Favorites</button>
+                <button onclick="addToCart(${product.id})">adicionar ao carrinho</button>
+                <button onclick="addToFavorites(${product.id})">adicionar ao favoritos</button>
+                <button onclick="comprar(${product.id})">realizar compra</button>
             </div>
         `;
     } else {
@@ -37,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         cart.push(product);
         localStorage.setItem('cart', JSON.stringify(cart));
-        alert('Product added to cart!');
+        alert('Adicionado ao carrinho!');
     }
 
     // Função para adicionar produto aos favoritos

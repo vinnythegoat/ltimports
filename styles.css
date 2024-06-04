@@ -51,8 +51,8 @@ main {
 }
 
 .product img {
-    width: 100%; /* Width 100% to fill the container */
-    height: 240px; /* Fixed height */
+    width: 75%; /* Width 100% to fill the container */
+    height: 250px; /* Fixed height */
     object-fit: cover; /* Crop the image to fit the container */
 }
 
@@ -64,8 +64,8 @@ main {
 }
 
 .cart-item img, .favorite-item img {
-    width: 100px; /* Fixed width */
-    height: 100px; /* Fixed height */
+    width: 120px; /* Fixed width */
+    height: 120px; /* Fixed height */
     object-fit: cover; /* Crop the image to fit the container */
 }
 

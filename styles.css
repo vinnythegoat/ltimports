@@ -105,3 +105,14 @@ button:hover {
 #texto{
     font-size: 29px;
 }
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        text-align: center;
+    }
+}

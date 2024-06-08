@@ -87,10 +87,9 @@ form input {
 
 button {
     display: block;
-    width: 100%;
     padding: 0.5rem;
     margin-top: 1rem;
-    background-color: #333;
+    background-color: #02033d;
     color: white;
     border: none;
     cursor: pointer;
@@ -113,6 +112,98 @@ button:hover {
 
     nav ul li a {
         display: block;
-        text-align: center;
+        text-align: left;
     }
+}
+#optionsMenu {
+    background-color: rgb(0, 0, 0);
+    border: 1px solid #ff0000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    position: absolute;
+    top: 237px;
+    left: 110px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+#optionsMenu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#optionsMenu li {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+#optionsMenu li:hover {
+    background-color: #000000;
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h2 {
+    margin-top: 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.logo-section {
+    flex: 1 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-section img {
+    max-width: 200px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.social-links li {
+    list-style: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
 }

@@ -1,7 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const productDetails = document.getElementById('product-details');
+    const productDetails = document.querySelector('.product-details');
+    const productImage = document.getElementById('product-img');
+    const productName = document.getElementById('product-name');
+    const productDescription = document.getElementById('product-description');
+    const productPrice = document.getElementById('product-price');
+    const addToCartButton = document.getElementById('add-to-cart');
+    const addToFavoritesButton = document.getElementById('add-to-favorites');
+    const reviewsList = document.getElementById('reviews-list');
+    const reviewForm = document.getElementById('review-form');
+    const reviewText = document.getElementById('review-text');
 
-    // Simulação de dados de produtos (mesmo array de `app.js`)
     const products = [
         { id: 1, name: 'Watch 1', description: 'Description 1', price: 100, image: 'imagens/download-removebg-preview.png' },
         { id: 2, name: 'Watch 2', description: 'Description 2', price: 200, image: 'imagens/rolex-submariner-misto-preto-prem1-dadae4b0699a6c479e16698334285206-1024-1024-removebg-preview.png' },
@@ -22,39 +30,60 @@ document.addEventListener('DOMContentLoaded', () => {
       
     ];
 
+   
     const selectedProductId = localStorage.getItem('selectedProduct');
     const product = products.find(p => p.id == selectedProductId);
 
     if (product) {
-        productDetails.innerHTML = `
-            <div class="product-detail">
-                <img src="${product.image}" alt="${product.name}">
-                <h3>${product.name}</h3>
-                <p>$${product.price}</p>
-                <button onclick="addToCart(${product.id})">adicionar ao carrinho</button>
-                <button onclick="addToFavorites(${product.id})">adicionar ao favoritos</button>
-                <button onclick="comprar(${product.id})">realizar compra</button>
-            </div>
-        `;
+        productImage.src = product.image;
+        productName.textContent = product.name;
+        productDescription.textContent = product.description;
+        productPrice.textContent = `$${product.price}`;
+
+        addToCartButton.addEventListener('click', () => {
+            addToCart(product.id);
+        });
+
+        addToFavoritesButton.addEventListener('click', () => {
+            addToFavorites(product.id);
+        });
     } else {
         productDetails.innerHTML = '<p>Product not found.</p>';
     }
 
     // Função para adicionar produto ao carrinho
-    window.addToCart = function(productId) {
+    function addToCart(productId) {
         const product = products.find(p => p.id === productId);
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         cart.push(product);
         localStorage.setItem('cart', JSON.stringify(cart));
-        alert('Adicionado ao carrinho!');
+        alert('Product added to cart!');
     }
 
     // Função para adicionar produto aos favoritos
-    window.addToFavorites = function(productId) {
+    function addToFavorites(productId) {
         const product = products.find(p => p.id === productId);
         let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
         favorites.push(product);
         localStorage.setItem('favorites', JSON.stringify(favorites));
         alert('Product added to favorites!');
     }
+
+    // Função para carregar avaliações
+    function loadReviews() {
+        const reviews = JSON.parse(localStorage.getItem(`reviews_${selectedProductId}`)) || [];
+        reviewsList.innerHTML = reviews.map(review => `<p>${review}</p>`).join('');
+    }
+
+    // Função para enviar uma avaliação
+    reviewForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const reviews = JSON.parse(localStorage.getItem(`reviews_${selectedProductId}`)) || [];
+        reviews.push(reviewText.value);
+        localStorage.setItem(`reviews_${selectedProductId}`, JSON.stringify(reviews));
+        reviewText.value = '';
+        loadReviews();
+    });
+
+    loadReviews();
 });

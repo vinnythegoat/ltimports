@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 2, name: 'Watch 2', description: 'Description 2', price: 200, image: 'imagens/rolex-submariner-misto-preto-prem1-dadae4b0699a6c479e16698334285206-1024-1024-removebg-preview.png' },
         { id: 3, name: 'Watch 3', description: 'Description 3', price: 300, image: 'imagens/relogio-luxo-premium-a-prova-dagua-e-choque-lojas-promorin-1-removebg-preview.png'},
         { id: 4, name: 'Watch 4', description: 'Description 4', price: 400, image: 'imagens/download.png' },
-        { id: 5, name: 'Watch 5', description: 'Description 5', price: 500, image: 'imagens/download.png' },
-        { id: 6, name: 'Watch 6', description: 'Description 6', price: 600, image: 'imagens/download.png' },
-        { id: 7, name: 'Watch 7', description: 'Description 7', price: 700, image:'imagens/download.png' },
-        { id: 8, name: 'Watch 8', description: 'Description 8', price: 800, image: 'images/watch8.jpg' },
-        { id: 9, name: 'Watch 9', description: 'Description 9', price: 100, image: '' },
+        { id: 5, name: 'Watch 5', description: 'Description 5', price: 500, image: 'imagens/re05-removebg-preview.png' },
+        { id: 6, name: 'Watch 6', description: 'Description 6', price: 600, image: 'imagens/re06-removebg-preview.png' },
+        { id: 7, name: 'Watch 7', description: 'Description 7', price: 700, image:'imagens/re07-removebg-preview.png' },
+        { id: 8, name: 'Watch 8', description: 'Description 8', price: 800, image: 'imagens/re08-removebg-preview.png' },
+        { id: 9, name: 'Watch 9', description: 'Description 9', price: 100, image: 'imagens/re9-removebg-preview.png' },
         { id: 10, name: 'Watch 10', description: 'Description 10', price: 200, image: 'images/watch2.jpg' },
         { id: 11, name: 'Watch 11', description: 'Description 11', price: 300, image: 'images/watch3.jpg' },
         { id: 12, name: 'Watch 12', description: 'Description 12', price: 400, image: 'images/watch4.jpg' },
@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
             productElement.innerHTML = `
                 <img src="${product.image}" alt="${product.name}" onclick="viewProduct(${product.id})">
                 <h3>${product.name}</h3>
-                <p>${product.description}</p>
                 <p>$${product.price}</p>
                
             `;
@@ -66,3 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderProducts();
 });
+document.getElementById('toggleButton').addEventListener('click', function() {
+    var optionsMenu = document.getElementById('optionsMenu');
+    if (optionsMenu.classList.contains('hidden')) {
+        optionsMenu.classList.remove('hidden');
+    } else {
+        optionsMenu.classList.add('hidden');
+    }
+});
+

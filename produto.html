@@ -3,17 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Product Details</title>
+    <link rel="stylesheet" href="produtos.css">
+    <title>Detalhes do Produto</title>
 </head>
 <body>
     <header>
-       
-        <a href="index.html"> <img src="imagens/seta.png" alt="" width="40" height="40" class="foto"></a>
+            <a href="index.html"> <img src="imagens/seta.png" alt="" width="40" height="40" class="foto"></a>
     </header>
     <main>
-        <div id="product-details"></div>
+        <div class="product-container">
+            <div class="product-image">
+                <img id="product-img" src="" alt="Product Image">
+            </div>
+            <div class="product-details">
+                <h2 id="product-name">Nome do Produto</h2>
+                <p id="product-description">Descrição do Produto</p>
+                <p id="product-price">$0.00</p>
+                <button id="add-to-cart">Adicionar ao Carrinho</button>
+                <button id="add-to-favorites">Adicionar aos Favoritos</button>
+            </div>
+        </div>
+        <div id="reviews">
+            <h2>Avaliações</h2>
+            <div id="reviews-list"></div>
+            <form id="review-form">
+                <label for="review-text">Deixe sua avaliação:</label>
+                <textarea id="review-text" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
     </main>
-    <script src="product.js"></script>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section logo-section">
+                <img src="images/logo.png" alt="Watch Store Logo">
+            </div>
+            <div class="footer-section contact">
+                <h2>Contato</h2>
+                <ul>
+                    <li>Email: contact@watchstore.com</li>
+                    <li>Telefone: (11) 1234-5678</li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h2>Siga-nos</h2>
+                <ul class="social-links">
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Watch Store. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="produto.js"></script>
 </body>
 </html>

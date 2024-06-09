@@ -21,6 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 14, name: 'Blancpain Fifty Fathoms', price: 17.897, image: 'imagens/re14-removebg-preview.png' },
         { id: 15, name: 'Breguet Classique', price: 38.567, image: 'imagens/re16-removebg-preview.png' },
         { id: 16, name: 'Zenith El Primero', price: 75.234, image: 'imagens/re18-removebg-preview.png' },
+        { id: 17, name: 'Grand Seiko Spring Drive', price: 33.887, image: 'imagens/imagem_2024-06-09_154830556-removebg-preview.png' },
+        { id: 18, name: 'Hamilton Khaki Field', price: 12.499, image: 'imagens/imagem_2024-06-09_154743394-removebg-preview.png' },
+        { id: 19, name: 'Blancpain Fifty Fathoms', price: 7.398, image: 'imagens/imagem_2024-06-09_154715216-removebg-preview.png' },
+        { id: 20, name: 'A. Lange & Söhne Lange 1', price: 29.345, image: 'imagens/imagem_2024-06-09_154643309-removebg-preview.png' },
+        { id: 21, name: 'Hublot Big Bang', price: 64.892, image: 'imagens/imagem_2024-06-09_154207250-removebg-preview.png' },
+        { id: 22, name: 'Tissot Le Locle', price: 45.734, image: 'imagens/imagem_2024-06-09_154342754-removebg-preview.png' },
+        { id: 23, name: 'Seiko Prospex', price: 5.564, image: 'imagens/imagem_2024-06-09_154436682-removebg-preview.png' },
+        { id: 24, name: 'Tissot Le Locle', price: 4.535, image: 'imagens/imagem_2024-06-09_154412595-removebg-preview.png' },
+
       
     ];
     // Função para renderizar produtos

@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         cart.push(product);
         localStorage.setItem('cart', JSON.stringify(cart));
-        alert('Product added to cart!');
+        alert('Produto Adicionado ao Carrinho!');
     }
 
     // Função para adicionar produto aos favoritos
@@ -62,8 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const product = products.find(p => p.id === productId);
         let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
         favorites.push(product);
-        localStorage.setItem('favorites', JSON.stringify(favorites));
-        alert('Product added to favorites!');
+        localStorage.setItem('favorites', JSON.stringify(favoritoses));
+        alert('Produto Adicionado ao Carrinho!');
     }
 
     // Função para redirecionar para a página de detalhes do produto

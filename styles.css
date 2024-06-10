@@ -293,3 +293,14 @@ button:hover {
     font-size: 16pt;
   }
 }
+@media (max-width: 600px) {
+        nav ul li {
+                display: block;
+                        text-align: center;
+                            }
+
+                                nav ul li a {
+                                        display: block;
+                                                padding: 10px;
+                                                    }
+                                                    }
